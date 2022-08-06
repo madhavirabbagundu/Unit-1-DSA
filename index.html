@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"
+              content="width=device-width,
+                       initial-scale=1.0" />
+        <title>
+          JavaScript | Without Throttling
+        </title>
+    </head>
+    <body>
+        <button id="nothrottle">Click Me</button>
+        <script>
+           
+            // Selected button with th egiven id
+            const btn = document.querySelector("#nothrottle");
+           
+            // Add event listener to the button
+            // to listen the click event
+            btn.addEventListener("click", () => {
+                console.log("button is clicked");
+            });
+        </script>
+    </body>
+</html>
