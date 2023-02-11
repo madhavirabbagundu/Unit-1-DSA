@@ -4,18 +4,18 @@
 //example
 const promise = new Promise(function(res,rej){
     setTimeout(()=>{
-    // console.log("output")
+    console.log("output")
     res()
     },[2000])
     var a = 10
     var b= 20
-    if(a!==b){
+    if(a===b){
         rej()
     }
     console.log("madhavi")
 })
-promise.then(function(){
-    console.log("sucess")
+promise.then(function(message){
+    console.log(message)
 }).catch(function(){
 
     console.log("failure")
