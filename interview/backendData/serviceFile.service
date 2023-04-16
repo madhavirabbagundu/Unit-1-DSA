@@ -1,0 +1,40 @@
+import { Injectable } from "@angular/core";
+// import { ApplicationDetailsModel } from '../model/applicantDetails.model';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
+@Injectable({
+    providedIn: 'root'
+})
+
+export class ApplicantInterviewDetailService {
+    endPoint: string;
+    userEndPoint: string;
+  constructor(
+    private httpClient: HttpClient
+  ) {
+   
+    this.endPoint = environment.APIEndPoint;
+    this.userEndPoint = `${environment.APIEndPoint}/interview`;
+  }
+  
+  getApplicantInterview(): Observable<any> {
+    const url = `${this.userEndPoint}/getquestions`;
+    return this.httpClient.get(url);
+  }
+ 
+
+  addApplicantInterviewDetails(applicantData): Observable<any> {
+    const url = `${this.userEndPoint}/postquestions`;
+    return this.httpClient.post(url,applicantData);
+  }
+
+  getInterviewerById(questionId):Observable<any>{
+    const url = `${this.userEndPoint}/get/${questionId}`;
+    return this.httpClient.get(url);
+  }
+
+  
+
+}
+

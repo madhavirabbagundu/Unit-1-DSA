@@ -1,0 +1,84 @@
+<main *ngIf="interviewer" class="content">
+    <div class="container-fluid p-0">
+      <div class="row">
+        <div class="col-md-12 col-xl-12">
+          <div class="card mb-3">
+            <div class="card-body text-center">
+              <div class="row profile-img">
+                <div class="col-md-6 text-left ">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD-4cCv0CWbW4fA0Zs7-4ZaPFboyaupiK10g&usqp=CAU"
+                    alt="" width="128" height="128" />
+                  <div class="d-inline-block " style="margin-left: 15px;">
+                    <h5 class="card-title mb-0">{{interviewer.applicantName}}</h5>
+                    <div class="text-muted role mb-2">{{interviewer.applicantId}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-12 col-xl-12">
+  
+          <div class="container user-profile">
+            <ul class="nav nav-tabs">
+              <li><a href="#tab1" data-toggle="tab" class="active">Interview Details</a></li>
+              <!-- <li><a href="#tab2" data-toggle="tab">Surveyor Assesment</a></li>
+              <li><a href="#tab3" data-toggle="tab">Homevisit Docs</a></li> -->
+           
+            </ul>
+  
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab1" role="tabpanel">
+               
+  
+                <div class="col-md-12 col-xl-12">
+                  <div class="container user-profile">
+                    <div class="application-sumary mydiv">
+                      <h2>Applicant &amp; Details</h2>
+                      <div *ngIf="interviewer.applicantId" class="row">
+                        <div class="col-md-4 col-sm-12">
+                          <label class="label-primary">Application Number</label><br>
+                          <span>{{interviewer.applicantId}}</span>
+                        </div>
+                        <div *ngIf="interviewer.applicantName" class="col-md-4 col-sm-12">
+                          <label class="label-primary">Applicant Name:</label> <br>
+                          <span>{{interviewer.applicantName}}</span>
+                        </div>
+                        <div *ngIf = "interviewer.interviewerName" class="col-md-4 col-sm-12">
+                            <label class="label-primary">Interviewer Name</label><br>
+                            <span>{{interviewer.interviewerName}}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th scope="'col">Q.No</th>
+                              <th scope = "col">Questions</th>
+                              <th scope = "col">Grade</th>
+                            </tr>
+                          </thead>
+                         <tbody *ngFor = "let applicant of interviewer.applicantQuestionDetailsModels; let i = index">
+                        <tr>
+                            <td>{{applicant.id}}</td>
+                            <td>{{applicant.question}}</td>
+                            <td>{{applicant.grade}}</td>
+                        </tr>
+                      </tbody>
+                        </table>
+                        </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+ 
+  <!-- <ngx-spinner bdColor="rgba(51, 51, 51, 0.1)" size="default" type="ball-spin-clockwise">
+  </ngx-spinner> -->
