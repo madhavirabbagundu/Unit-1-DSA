@@ -1,6 +1,4 @@
-public class controller {
-    
-}
+
 package com.swadha.spashtam.applicantinterview.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
