@@ -1,8 +1,8 @@
 var str = [4,5,7]
-var str1 = [9,2,5]
+var str1 = [5,2,5]
 var out = ""
 for(var i = 0; i < str.length; i++){
-    for(var j = i+1; j< str1.length; j++){
+    for(var j = 0; j< str1.length; j++){
         if(str[i]===str1[j]){
             out = str[i]
         }

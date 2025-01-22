@@ -50,12 +50,12 @@ var count = 0;
 var arr2 = ar.map(item => item==item?count++:count)
     
 
-    console.log(arr2)
+    // console.log(arr2)
 
-    const numbers = [1, 2, 3, 2, 4, 5, 5, 6];
+    const numbers = [1, 2, 5, 2, 4, 5, 5, 6];
 
     const set = new Set(numbers);
-    // console.log(set)
+    console.log(set)
     
     const duplicates = numbers.filter(item => {
         // console.log(duplicates)

@@ -56,7 +56,7 @@ function pattern(n){
             }
 
         }
-        console.log(out)
+        // console.log(out)
 
     }
     // return out
